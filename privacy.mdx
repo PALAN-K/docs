@@ -1,0 +1,80 @@
+---
+title: Privacy Policy
+description: 'Privacy Policy for PalanK Browser Relay Chrome Extension'
+---
+
+# Privacy Policy
+
+**Last updated: February 3, 2026**
+
+## Overview
+
+PalanK Browser Relay ("the Extension") is a Chrome extension that connects your browser tabs to the PalanK desktop application for AI-powered browser automation. This privacy policy explains how the Extension handles your data.
+
+## Data Collection
+
+**We do not collect, store, or transmit any personal data.**
+
+The Extension operates entirely locally on your device and does not send any information to external servers, except for communication with the locally running PalanK desktop application on your own machine.
+
+## Permissions Explained
+
+### Debugger Permission
+The `debugger` permission is required to control browser tabs via Chrome DevTools Protocol (CDP). This allows the Extension to:
+- Navigate web pages
+- Click elements
+- Fill forms
+- Take screenshots
+- Execute JavaScript
+
+This permission is only activated when you explicitly click the Extension icon to attach a tab.
+
+### Tabs Permission
+The `tabs` permission is used to:
+- Access information about the currently active tab (URL, title)
+- Detect when tabs are opened, closed, or updated
+- Manage tab attachment status
+
+### ActiveTab Permission
+The `activeTab` permission provides temporary access to the currently active tab only when you click the Extension icon. This limits access to tabs you explicitly choose to control.
+
+### Storage Permission
+The `storage` permission is used solely to save your relay port configuration locally. No data is synced to any cloud service.
+
+### Host Permissions (localhost only)
+The Extension only connects to `http://127.0.0.1/*` and `http://localhost/*`. This is strictly for communicating with the PalanK desktop application running on your local machine. No external network connections are made.
+
+## Data Processing
+
+- **Local only**: All browser automation happens locally between the Extension and PalanK desktop app
+- **No analytics**: We do not use any analytics or tracking services
+- **No cookies**: The Extension does not set or read any cookies
+- **No external servers**: No data is transmitted outside your local machine
+
+## Third-Party Services
+
+The PalanK desktop application may communicate with Anthropic's Claude AI service to process your natural language commands. This communication is handled by the desktop application, not the browser extension. Please refer to [Anthropic's Privacy Policy](https://www.anthropic.com/privacy) for details on their data handling practices.
+
+## Data Retention
+
+The Extension does not retain any data. The only stored information is your relay port setting, which remains in Chrome's local storage until you uninstall the Extension or clear browser data.
+
+## User Rights
+
+Since we do not collect personal data, there is no data to access, modify, or delete. You can uninstall the Extension at any time to remove all associated local storage.
+
+## Children's Privacy
+
+The Extension is not directed at children under 13 years of age, and we do not knowingly collect personal information from children.
+
+## Changes to This Policy
+
+We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date.
+
+## Contact
+
+If you have questions about this Privacy Policy, please contact us at:
+
+**Email**: support@palank.co.kr
+
+**Website**: https://palank.co.kr
