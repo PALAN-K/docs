@@ -1,0 +1,136 @@
+---
+title: Browser Control
+description: 'Control Chrome tabs with AI-powered commands'
+---
+
+## Overview
+
+PalanK provides comprehensive browser automation through natural language commands. The AI understands context and executes complex multi-step operations automatically.
+
+## Navigation
+
+### Page Navigation
+
+```text
+"Go to amazon.com"
+"Navigate to https://github.com/PALAN-K"
+"Open google.com in a new tab"
+"Go back to the previous page"
+"Refresh this page"
+```
+
+### Tab Management
+
+```text
+"Open a new tab"
+"Close this tab"
+"Switch to the second tab"
+```
+
+## Interactions
+
+### Clicking Elements
+
+```text
+"Click the login button"
+"Click on the search icon"
+"Click the first product in the list"
+"Double-click on the image"
+```
+
+### Typing Text
+
+```text
+"Type 'hello world' in the search box"
+"Fill the email field with test@example.com"
+"Enter my username in the login form"
+"Clear the input field and type 'new text'"
+```
+
+### Form Handling
+
+```text
+"Fill out the contact form with my information"
+"Select 'United States' from the country dropdown"
+"Check the 'Remember me' checkbox"
+"Submit the form"
+```
+
+## Page Analysis
+
+### Reading Content
+
+```text
+"What's the title of this page?"
+"Read the main article content"
+"List all the links on this page"
+"Find the price of this product"
+```
+
+### Screenshots
+
+```text
+"Take a screenshot"
+"Capture the visible area"
+"Screenshot the entire page"
+```
+
+### Element Finding
+
+```text
+"Find all buttons on this page"
+"Locate the login form"
+"Where is the search bar?"
+```
+
+## Scrolling
+
+```text
+"Scroll down"
+"Scroll to the bottom of the page"
+"Scroll up a little"
+"Scroll to the comments section"
+```
+
+## Advanced Operations
+
+### Waiting
+
+```text
+"Wait for the page to load"
+"Wait until the spinner disappears"
+"Wait 3 seconds"
+```
+
+### Conditional Actions
+
+```text
+"If there's a cookie banner, close it"
+"Click 'Load more' until all items are visible"
+"If logged in, go to dashboard; otherwise login first"
+```
+
+### Data Extraction
+
+```text
+"Extract all product names and prices"
+"Get the table data as CSV"
+"Copy all email addresses on this page"
+```
+
+## Best Practices
+
+<Tip>
+  Be specific about which element you want to interact with. Instead of "click the button", say "click the blue Submit button at the bottom".
+</Tip>
+
+<Warning>
+  The AI sees the page as a user would. If an element is hidden or requires scrolling, mention that in your command.
+</Warning>
+
+## Limitations
+
+- Cannot interact with browser chrome (address bar, bookmarks)
+- Cannot access cross-origin iframes with different security policies
+- Some heavily protected sites may block automation
+- File upload dialogs require manual interaction

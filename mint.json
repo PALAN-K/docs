@@ -1,0 +1,68 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "PalanK Agent",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#FF5A36",
+    "light": "#FF7A5C",
+    "dark": "#E04420",
+    "anchors": {
+      "from": "#FF5A36",
+      "to": "#FF7A5C"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Download",
+      "url": "https://palank.co.kr"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Get Started",
+    "url": "/quickstart"
+  },
+  "tabs": [
+    {
+      "name": "Documentation",
+      "url": "/"
+    },
+    {
+      "name": "API Reference",
+      "url": "/api-reference"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/PALAN-K"
+    },
+    {
+      "name": "Community",
+      "icon": "discord",
+      "url": "https://discord.gg/palank"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": ["introduction", "quickstart", "browser-extension"]
+    },
+    {
+      "group": "Features",
+      "pages": ["features/browser-control", "features/ai-assistant", "features/automation"]
+    },
+    {
+      "group": "API Reference",
+      "pages": ["api-reference/introduction", "api-reference/authentication", "api-reference/endpoints"]
+    }
+  ],
+  "footerSocials": {
+    "github": "https://github.com/PALAN-K",
+    "twitter": "https://twitter.com/palank_ai"
+  }
+}

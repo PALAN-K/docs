@@ -1,0 +1,128 @@
+---
+title: Automation
+description: 'Automate repetitive web tasks with AI assistance'
+---
+
+## Overview
+
+PalanK helps you automate repetitive browser tasks without writing code. Describe what you want to accomplish, and the AI handles the implementation.
+
+## Common Automation Scenarios
+
+### Data Collection
+
+```text
+"Go through each product on this page and collect the name, price, and rating"
+
+"Scrape all job listings from this search result"
+
+"Extract all email addresses from this contact page"
+```
+
+### Form Filling
+
+```text
+"Fill out this registration form:
+- Name: John Doe
+- Email: john@example.com
+- Company: Acme Inc"
+
+"Auto-fill shipping address with my saved information"
+```
+
+### Monitoring
+
+```text
+"Check if this product is back in stock"
+
+"Look for any price changes on this item"
+
+"Tell me when the status changes from 'Pending' to 'Approved'"
+```
+
+### Batch Operations
+
+```text
+"Download all images from this gallery"
+
+"Like all posts from this user"
+
+"Mark all unread emails as read"
+```
+
+## Workflow Examples
+
+### E-commerce Price Comparison
+
+<Steps>
+  <Step title="Define Products">
+    "I want to compare prices for 'Sony WH-1000XM5 headphones'"
+  </Step>
+  <Step title="Check Multiple Sites">
+    "Check Amazon, Best Buy, and Walmart for this product"
+  </Step>
+  <Step title="Collect Results">
+    "Give me a summary of prices from each site"
+  </Step>
+</Steps>
+
+### Social Media Management
+
+<Steps>
+  <Step title="Navigate">
+    "Go to my Twitter profile"
+  </Step>
+  <Step title="Analyze">
+    "Show me my recent posts with the most engagement"
+  </Step>
+  <Step title="Act">
+    "Reply to the top comment with a thank you message"
+  </Step>
+</Steps>
+
+### Research Automation
+
+<Steps>
+  <Step title="Search">
+    "Search Google Scholar for 'machine learning healthcare'"
+  </Step>
+  <Step title="Filter">
+    "Filter results from the last 2 years"
+  </Step>
+  <Step title="Extract">
+    "List the titles and authors of the first 10 results"
+  </Step>
+</Steps>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion icon="clock" title="Handle Timing">
+    Web pages load at different speeds. Include "wait for page to load" when navigating between pages.
+  </Accordion>
+  <Accordion icon="shield-check" title="Respect Limits">
+    Don't automate actions that violate website terms of service. Be mindful of rate limits.
+  </Accordion>
+  <Accordion icon="arrows-split-up-and-left" title="Break Down Tasks">
+    For complex workflows, describe one step at a time rather than everything at once.
+  </Accordion>
+  <Accordion icon="bug" title="Verify Results">
+    Ask the AI to confirm actions were successful: "Did the form submit correctly?"
+  </Accordion>
+</AccordionGroup>
+
+## Limitations
+
+<Warning>
+**Rate Limiting**: Rapid automated actions may trigger website security measures.
+
+**Dynamic Content**: Some sites load content dynamically, requiring wait commands.
+
+**Authentication**: The AI cannot bypass login requirements or CAPTCHAs.
+</Warning>
+
+## Privacy Considerations
+
+<Info>
+All automation runs locally on your machine. PalanK does not store or transmit your browsing data to external servers. Only your commands are sent to Claude AI for interpretation.
+</Info>

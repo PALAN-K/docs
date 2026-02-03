@@ -1,0 +1,106 @@
+---
+title: Quick Start
+description: 'Get PalanK Agent running in under 5 minutes'
+---
+
+## Step 1: Download PalanK
+
+Download the latest version of PalanK Agent for Windows.
+
+<Card
+  title="Download PalanK Agent"
+  icon="download"
+  href="https://palank.co.kr"
+>
+  Get the latest Windows installer
+</Card>
+
+## Step 2: Install Chrome Extension
+
+The Chrome extension allows PalanK to control your browser tabs.
+
+<Steps>
+  <Step title="Install Extension">
+    Install [PalanK Browser Relay](https://chrome.google.com/webstore/detail/palank-browser-relay) from Chrome Web Store.
+  </Step>
+  <Step title="Pin to Toolbar">
+    Click the puzzle icon in Chrome toolbar, then pin PalanK Browser Relay for easy access.
+  </Step>
+</Steps>
+
+<Note>
+  The extension only activates when you click its icon. Your browsing is never monitored passively.
+</Note>
+
+## Step 3: Connect Your Browser
+
+<Steps>
+  <Step title="Launch PalanK">
+    Open PalanK Agent on your desktop. Wait for the app to fully load.
+  </Step>
+  <Step title="Open a Tab">
+    Navigate to any webpage you want to automate in Chrome.
+  </Step>
+  <Step title="Activate Extension">
+    Click the PalanK Browser Relay icon in Chrome toolbar. The badge will show "ON" when connected.
+  </Step>
+</Steps>
+
+<Check>
+  When successfully connected, you'll see:
+  - Green "ON" badge on the extension icon
+  - "Browser connected" status in PalanK app
+</Check>
+
+## Step 4: Start Using AI
+
+Now you can control your browser with natural language!
+
+<CodeGroup>
+```text Example Commands
+"Go to google.com and search for weather"
+
+"Click the first search result"
+
+"Fill the email field with test@example.com"
+
+"Take a screenshot of this page"
+
+"Scroll down and find the pricing section"
+```
+</CodeGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion icon="circle-exclamation" title="Extension shows red ! badge">
+    The relay server is not reachable. Make sure PalanK Desktop app is running, then click the extension icon again.
+  </Accordion>
+  <Accordion icon="plug" title="Can't connect to browser">
+    1. Check if PalanK app is fully loaded
+    2. Try clicking the extension icon to reconnect
+    3. Refresh the webpage and try again
+  </Accordion>
+  <Accordion icon="shield" title="Permission denied">
+    Some pages (chrome://, Chrome Web Store) cannot be controlled for security reasons. Try a regular webpage.
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card
+    title="Browser Control"
+    icon="mouse-pointer"
+    href="/features/browser-control"
+  >
+    Learn all browser automation capabilities
+  </Card>
+  <Card
+    title="AI Assistant"
+    icon="robot"
+    href="/features/ai-assistant"
+  >
+    Master AI command patterns
+  </Card>
+</CardGroup>

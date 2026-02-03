@@ -1,0 +1,126 @@
+---
+title: AI Assistant
+description: 'Powered by Claude AI for intelligent browser automation'
+---
+
+## Overview
+
+PalanK is powered by Claude, Anthropic's AI assistant. This enables natural language understanding, context awareness, and intelligent decision-making for browser automation.
+
+## Natural Language Commands
+
+### Conversational Style
+
+You don't need special syntax. Just describe what you want:
+
+```text
+"I need to check my email on Gmail"
+"Can you help me find flights to Tokyo next month?"
+"Look up the weather forecast for this weekend"
+```
+
+### Multi-Step Tasks
+
+The AI breaks down complex requests automatically:
+
+```text
+"Log into my account, go to settings, and change my password"
+
+AI executes:
+1. Navigate to login page
+2. Enter credentials
+3. Click login
+4. Find settings menu
+5. Navigate to password section
+6. Initiate password change
+```
+
+## Context Awareness
+
+### Page Understanding
+
+The AI analyzes the current page to understand:
+- Page structure and layout
+- Interactive elements (buttons, forms, links)
+- Content and context
+- User flow and navigation patterns
+
+### Memory
+
+Within a session, the AI remembers:
+- Previous commands and results
+- Information you've shared
+- Errors encountered and how they were resolved
+
+```text
+User: "Go to amazon.com and search for laptop"
+AI: [executes search]
+
+User: "Now filter by price under $500"
+AI: [understands context, applies filter]
+
+User: "Click on the first result"
+AI: [knows we're looking at laptops under $500]
+```
+
+## Intelligent Error Handling
+
+### Auto-Recovery
+
+When something goes wrong, the AI attempts to recover:
+
+```text
+Command: "Click the checkout button"
+
+If button not visible:
+- AI scrolls to find it
+- Waits for page load if needed
+- Reports if button doesn't exist
+```
+
+### Clear Feedback
+
+The AI explains what it's doing and any issues:
+
+```text
+"I couldn't find a 'checkout' button. I see a 'Proceed to Cart'
+button instead. Should I click that?"
+```
+
+## Supported Languages
+
+PalanK understands commands in multiple languages:
+
+- English
+- Korean (한국어)
+- Japanese (日本語)
+- Chinese (中文)
+- Spanish (Español)
+- And more...
+
+## Tips for Better Results
+
+<CardGroup cols={2}>
+  <Card title="Be Specific" icon="bullseye">
+    "Click the red Add to Cart button" works better than "click the button"
+  </Card>
+  <Card title="Provide Context" icon="lightbulb">
+    "I'm trying to book a hotel for 2 nights" helps AI understand your goal
+  </Card>
+  <Card title="Ask Questions" icon="question">
+    "What options do I have here?" lets AI analyze the page for you
+  </Card>
+  <Card title="Iterate" icon="arrows-rotate">
+    If first attempt fails, try rephrasing or providing more detail
+  </Card>
+</CardGroup>
+
+## What AI Can't Do
+
+<Warning>
+The AI cannot:
+- Access your saved passwords or autofill data
+- Interact with native OS dialogs
+- Bypass CAPTCHAs or security measures
+- Access pages you're not logged into
+</Warning>

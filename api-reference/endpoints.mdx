@@ -1,0 +1,319 @@
+---
+title: Endpoints
+description: 'Available API methods and their usage'
+---
+
+## CDP Command Forwarding
+
+The primary method for browser control is `forwardCDPCommand`, which proxies Chrome DevTools Protocol commands.
+
+### forwardCDPCommand
+
+<ParamField path="method" type="string" required>
+  The CDP method to execute (e.g., `Page.navigate`)
+</ParamField>
+
+<ParamField path="params" type="object">
+  Parameters for the CDP method
+</ParamField>
+
+<ParamField path="sessionId" type="string">
+  Target session ID (optional - defaults to first attached tab)
+</ParamField>
+
+## Navigation
+
+### Page.navigate
+
+Navigate to a URL.
+
+<CodeGroup>
+```json Request
+{
+  "id": 1,
+  "method": "forwardCDPCommand",
+  "params": {
+    "method": "Page.navigate",
+    "params": {
+      "url": "https://example.com"
+    }
+  }
+}
+```
+
+```json Response
+{
+  "id": 1,
+  "result": {
+    "frameId": "ABC123",
+    "loaderId": "DEF456"
+  }
+}
+```
+</CodeGroup>
+
+### Page.reload
+
+Reload the current page.
+
+```json
+{
+  "id": 1,
+  "method": "forwardCDPCommand",
+  "params": {
+    "method": "Page.reload",
+    "params": {
+      "ignoreCache": true
+    }
+  }
+}
+```
+
+## Tab Management
+
+### Target.createTarget
+
+Open a new tab.
+
+<CodeGroup>
+```json Request
+{
+  "id": 1,
+  "method": "forwardCDPCommand",
+  "params": {
+    "method": "Target.createTarget",
+    "params": {
+      "url": "https://example.com"
+    }
+  }
+}
+```
+
+```json Response
+{
+  "id": 1,
+  "result": {
+    "targetId": "XYZ789"
+  }
+}
+```
+</CodeGroup>
+
+### Target.closeTarget
+
+Close a tab.
+
+```json
+{
+  "id": 1,
+  "method": "forwardCDPCommand",
+  "params": {
+    "method": "Target.closeTarget",
+    "params": {
+      "targetId": "XYZ789"
+    }
+  }
+}
+```
+
+### Target.activateTarget
+
+Bring a tab to focus.
+
+```json
+{
+  "id": 1,
+  "method": "forwardCDPCommand",
+  "params": {
+    "method": "Target.activateTarget",
+    "params": {
+      "targetId": "XYZ789"
+    }
+  }
+}
+```
+
+## JavaScript Execution
+
+### Runtime.evaluate
+
+Execute JavaScript in the page context.
+
+<CodeGroup>
+```json Request
+{
+  "id": 1,
+  "method": "forwardCDPCommand",
+  "params": {
+    "method": "Runtime.evaluate",
+    "params": {
+      "expression": "document.title",
+      "returnByValue": true
+    }
+  }
+}
+```
+
+```json Response
+{
+  "id": 1,
+  "result": {
+    "result": {
+      "type": "string",
+      "value": "Example Domain"
+    }
+  }
+}
+```
+</CodeGroup>
+
+## Input Events
+
+### Input.dispatchMouseEvent
+
+Simulate mouse actions.
+
+```json
+{
+  "id": 1,
+  "method": "forwardCDPCommand",
+  "params": {
+    "method": "Input.dispatchMouseEvent",
+    "params": {
+      "type": "mousePressed",
+      "x": 100,
+      "y": 200,
+      "button": "left",
+      "clickCount": 1
+    }
+  }
+}
+```
+
+Mouse event types:
+- `mousePressed`
+- `mouseReleased`
+- `mouseMoved`
+
+### Input.dispatchKeyEvent
+
+Simulate keyboard input.
+
+```json
+{
+  "id": 1,
+  "method": "forwardCDPCommand",
+  "params": {
+    "method": "Input.dispatchKeyEvent",
+    "params": {
+      "type": "keyDown",
+      "key": "Enter"
+    }
+  }
+}
+```
+
+## Screenshots
+
+### Page.captureScreenshot
+
+Capture the visible page area.
+
+<CodeGroup>
+```json Request
+{
+  "id": 1,
+  "method": "forwardCDPCommand",
+  "params": {
+    "method": "Page.captureScreenshot",
+    "params": {
+      "format": "png",
+      "quality": 100
+    }
+  }
+}
+```
+
+```json Response
+{
+  "id": 1,
+  "result": {
+    "data": "iVBORw0KGgoAAAANSUhEUgA..."
+  }
+}
+```
+</CodeGroup>
+
+<Note>
+The `data` field contains base64-encoded image data.
+</Note>
+
+## DOM Operations
+
+### DOM.getDocument
+
+Get the document root node.
+
+```json
+{
+  "id": 1,
+  "method": "forwardCDPCommand",
+  "params": {
+    "method": "DOM.getDocument",
+    "params": {
+      "depth": 2
+    }
+  }
+}
+```
+
+### DOM.querySelector
+
+Find an element by CSS selector.
+
+```json
+{
+  "id": 1,
+  "method": "forwardCDPCommand",
+  "params": {
+    "method": "DOM.querySelector",
+    "params": {
+      "nodeId": 1,
+      "selector": "#search-input"
+    }
+  }
+}
+```
+
+## Events
+
+The Gateway forwards CDP events from the browser:
+
+```json
+{
+  "method": "forwardCDPEvent",
+  "params": {
+    "sessionId": "cb-tab-1",
+    "method": "Page.loadEventFired",
+    "params": {
+      "timestamp": 12345.678
+    }
+  }
+}
+```
+
+Common events:
+- `Page.loadEventFired` - Page finished loading
+- `Page.frameNavigated` - Frame navigation completed
+- `Runtime.consoleAPICalled` - Console message logged
+- `Target.attachedToTarget` - Tab attached
+- `Target.detachedFromTarget` - Tab detached
+
+## Full CDP Reference
+
+For complete CDP documentation, see:
+- [Chrome DevTools Protocol Viewer](https://chromedevtools.github.io/devtools-protocol/)
+- [Page Domain](https://chromedevtools.github.io/devtools-protocol/tot/Page/)
+- [Runtime Domain](https://chromedevtools.github.io/devtools-protocol/tot/Runtime/)
+- [Input Domain](https://chromedevtools.github.io/devtools-protocol/tot/Input/)
+- [DOM Domain](https://chromedevtools.github.io/devtools-protocol/tot/DOM/)
