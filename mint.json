@@ -6,10 +6,10 @@
     "defaultLocale": "en"
   },
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/icon.png",
+    "light": "/logo/icon.png"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "colors": {
     "primary": "#FF5A36",
     "light": "#FF7A5C",
