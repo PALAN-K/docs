@@ -21,6 +21,14 @@
   },
   "topbarLinks": [
     {
+      "name": "한국어",
+      "url": "/ko"
+    },
+    {
+      "name": "日本語",
+      "url": "/ja"
+    },
+    {
       "name": "Download",
       "url": "https://palank.co.kr"
     }
