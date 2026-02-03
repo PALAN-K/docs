@@ -41,16 +41,15 @@
   ],
   "anchors": [
     {
-      "name": "GitHub",
-      "icon": "github",
-      "url": "https://github.com/PALAN-K"
-    },
-    {
-      "name": "Community",
-      "icon": "discord",
-      "url": "https://discord.gg/palank"
+      "name": "Contact",
+      "icon": "envelope",
+      "url": "mailto:support@palank.co.kr"
     }
   ],
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true
+  },
   "navigation": [
     {
       "group": "Get Started",
@@ -66,7 +65,6 @@
     }
   ],
   "footerSocials": {
-    "github": "https://github.com/PALAN-K",
-    "twitter": "https://twitter.com/palank_ai"
+    "website": "https://palank.co.kr"
   }
 }
