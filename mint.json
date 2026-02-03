@@ -22,11 +22,11 @@
   "topbarLinks": [
     {
       "name": "한국어",
-      "url": "/ko"
+      "url": "/ko/introduction"
     },
     {
       "name": "日本語",
-      "url": "/ja"
+      "url": "/ja/introduction"
     },
     {
       "name": "Download",
