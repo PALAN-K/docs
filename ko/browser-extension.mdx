@@ -1,0 +1,106 @@
+---
+title: 브라우저 확장 프로그램
+description: 'Chrome용 PalanK Browser Relay 설치 및 설정'
+---
+
+## 개요
+
+PalanK Browser Relay는 브라우저 탭을 PalanK Agent에 연결하는 가벼운 Chrome 확장 프로그램입니다. Chrome의 내장 디버깅 프로토콜(CDP)을 사용하여 AI 기반 브라우저 자동화를 가능하게 합니다.
+
+<Info>
+  확장 프로그램은 명시적으로 연결한 탭에서만 활성화됩니다. 브라우징 기록과 데이터는 수집되지 않습니다.
+</Info>
+
+## 설치
+
+### Chrome 웹 스토어 (권장)
+
+<Card
+  title="Chrome 웹 스토어에서 설치"
+  icon="chrome"
+  href="https://chrome.google.com/webstore/detail/palank-browser-relay"
+>
+  원클릭 설치 및 자동 업데이트
+</Card>
+
+### 수동 설치 (개발자 모드)
+
+테스트 또는 개발 목적:
+
+<Steps>
+  <Step title="확장 프로그램 다운로드">
+    [GitHub 릴리즈](https://github.com/PALAN-K/palank-opemclaw/releases)에서 확장 프로그램 파일을 다운로드합니다.
+  </Step>
+  <Step title="확장 프로그램 페이지 열기">
+    Chrome에서 `chrome://extensions`로 이동합니다.
+  </Step>
+  <Step title="개발자 모드 활성화">
+    오른쪽 상단의 "개발자 모드"를 켭니다.
+  </Step>
+  <Step title="확장 프로그램 로드">
+    "압축해제된 확장 프로그램을 로드합니다"를 클릭하고 확장 프로그램 폴더를 선택합니다.
+  </Step>
+</Steps>
+
+## 사용법
+
+### 탭 연결하기
+
+1. 제어하려는 웹페이지로 이동
+2. 도구 모음에서 PalanK Browser Relay 아이콘 클릭
+3. 배지에 "ON"이 표시될 때까지 대기
+
+<Warning>
+  Chrome이 "PalanK Browser Relay에서 이 브라우저에 대한 디버깅을 시작합니다"라는 경고를 표시합니다. 이것은 정상입니다 - 확장 프로그램이 페이지를 제어하는 방식입니다.
+</Warning>
+
+### 탭 연결 해제하기
+
+확장 프로그램 아이콘을 다시 클릭하면 연결이 해제됩니다. 배지가 사라집니다.
+
+### 배지 상태
+
+| 배지 | 의미 |
+|------|------|
+| **ON** (주황색) | 탭이 연결되어 준비됨 |
+| **...** (노란색) | 릴레이 서버에 연결 중 |
+| **!** (빨간색) | 릴레이에 연결할 수 없음 - PalanK 앱이 실행되지 않음 |
+| (없음) | 탭이 연결되지 않음 |
+
+## 설정
+
+### 릴레이 포트 변경
+
+PalanK를 다른 포트를 사용하도록 설정한 경우:
+
+1. 확장 프로그램 아이콘 우클릭 → 옵션
+2. 새 포트 번호 입력
+3. 저장 클릭
+
+<Note>
+  기본 포트는 `18792`입니다. PalanK의 CDP 설정을 수정한 경우에만 변경하세요.
+</Note>
+
+## 권한
+
+확장 프로그램에 필요한 권한:
+
+| 권한 | 목적 |
+|------|------|
+| `debugger` | Chrome DevTools 프로토콜을 통한 페이지 제어 |
+| `tabs` | 현재 탭 정보 접근 |
+| `activeTab` | 클릭 시 활성 탭과 상호작용 |
+| `storage` | 릴레이 포트 설정 저장 |
+| `host_permissions` | 로컬 릴레이 서버에 연결 |
+
+<Check>
+  모든 통신은 `127.0.0.1` (로컬호스트)에서 이루어집니다. 외부 서버로 데이터가 전송되지 않습니다.
+</Check>
+
+## 제한 사항
+
+확장 프로그램이 제어할 수 없는 페이지:
+- Chrome 내부 페이지 (`chrome://`, `edge://`)
+- Chrome 웹 스토어 페이지
+- 다른 확장 프로그램 페이지
+- PDF 뷰어

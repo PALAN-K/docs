@@ -1,0 +1,106 @@
+---
+title: クイックスタート
+description: '5分以内にPalanK Agentを起動'
+---
+
+## ステップ1: PalanKをダウンロード
+
+Windows向けPalanK Agentの最新バージョンをダウンロードしてください。
+
+<Card
+  title="PalanK Agentをダウンロード"
+  icon="download"
+  href="https://palank.co.kr"
+>
+  最新のWindowsインストーラーを入手
+</Card>
+
+## ステップ2: Chrome拡張機能をインストール
+
+Chrome拡張機能により、PalanKがブラウザタブを制御できるようになります。
+
+<Steps>
+  <Step title="拡張機能をインストール">
+    Chromeウェブストアから[PalanK Browser Relay](https://chrome.google.com/webstore/detail/palank-browser-relay)をインストールします。
+  </Step>
+  <Step title="ツールバーにピン留め">
+    Chromeツールバーのパズルアイコンをクリックし、PalanK Browser Relayをピン留めします。
+  </Step>
+</Steps>
+
+<Note>
+  拡張機能はアイコンをクリックした時のみアクティブになります。閲覧が受動的に監視されることはありません。
+</Note>
+
+## ステップ3: ブラウザを接続
+
+<Steps>
+  <Step title="PalanKを起動">
+    デスクトップでPalanK Agentを開きます。アプリが完全にロードされるまで待ちます。
+  </Step>
+  <Step title="タブを開く">
+    Chromeで自動化したいウェブページに移動します。
+  </Step>
+  <Step title="拡張機能をアクティベート">
+    ChromeツールバーのPalanK Browser Relayアイコンをクリックします。接続されるとバッジに「ON」と表示されます。
+  </Step>
+</Steps>
+
+<Check>
+  正常に接続されると、以下が確認できます：
+  - 拡張機能アイコンに緑の「ON」バッジ
+  - PalanKアプリに「ブラウザ接続済み」ステータス
+</Check>
+
+## ステップ4: AIの使用を開始
+
+自然言語でブラウザを制御できます！
+
+<CodeGroup>
+```text コマンド例
+「google.comに行って天気を検索して」
+
+「最初の検索結果をクリックして」
+
+「メールフィールドにtest@example.comを入力して」
+
+「このページのスクリーンショットを撮って」
+
+「下にスクロールして価格セクションを見つけて」
+```
+</CodeGroup>
+
+## トラブルシューティング
+
+<AccordionGroup>
+  <Accordion icon="circle-exclamation" title="拡張機能に赤い!バッジが表示される">
+    リレーサーバーに到達できません。PalanKデスクトップアプリが実行中であることを確認し、拡張機能アイコンを再度クリックしてください。
+  </Accordion>
+  <Accordion icon="plug" title="ブラウザに接続できない">
+    1. PalanKアプリが完全にロードされているか確認
+    2. 拡張機能アイコンをクリックして再接続を試みる
+    3. ウェブページを更新して再試行
+  </Accordion>
+  <Accordion icon="shield" title="権限が拒否された">
+    一部のページ（chrome://、Chromeウェブストア）はセキュリティ上の理由で制御できません。通常のウェブページで試してください。
+  </Accordion>
+</AccordionGroup>
+
+## 次のステップ
+
+<CardGroup cols={2}>
+  <Card
+    title="ブラウザ制御"
+    icon="mouse-pointer"
+    href="/ja/features/browser-control"
+  >
+    すべてのブラウザ自動化機能を学ぶ
+  </Card>
+  <Card
+    title="AIアシスタント"
+    icon="robot"
+    href="/ja/features/ai-assistant"
+  >
+    AIコマンドパターンをマスター
+  </Card>
+</CardGroup>

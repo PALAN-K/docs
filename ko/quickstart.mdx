@@ -1,0 +1,106 @@
+---
+title: 빠른 시작
+description: '5분 안에 PalanK Agent 시작하기'
+---
+
+## 1단계: PalanK 다운로드
+
+Windows용 최신 버전의 PalanK Agent를 다운로드하세요.
+
+<Card
+  title="PalanK Agent 다운로드"
+  icon="download"
+  href="https://palank.co.kr"
+>
+  최신 Windows 설치 프로그램 받기
+</Card>
+
+## 2단계: Chrome 확장 프로그램 설치
+
+Chrome 확장 프로그램을 통해 PalanK가 브라우저 탭을 제어할 수 있습니다.
+
+<Steps>
+  <Step title="확장 프로그램 설치">
+    Chrome 웹 스토어에서 [PalanK Browser Relay](https://chrome.google.com/webstore/detail/palank-browser-relay)를 설치하세요.
+  </Step>
+  <Step title="도구 모음에 고정">
+    Chrome 도구 모음의 퍼즐 아이콘을 클릭하고 PalanK Browser Relay를 고정하세요.
+  </Step>
+</Steps>
+
+<Note>
+  확장 프로그램은 아이콘을 클릭할 때만 활성화됩니다. 브라우징이 수동적으로 모니터링되지 않습니다.
+</Note>
+
+## 3단계: 브라우저 연결
+
+<Steps>
+  <Step title="PalanK 실행">
+    데스크톱에서 PalanK Agent를 실행합니다. 앱이 완전히 로드될 때까지 기다리세요.
+  </Step>
+  <Step title="탭 열기">
+    Chrome에서 자동화하려는 웹페이지로 이동합니다.
+  </Step>
+  <Step title="확장 프로그램 활성화">
+    Chrome 도구 모음에서 PalanK Browser Relay 아이콘을 클릭합니다. 연결되면 배지에 "ON"이 표시됩니다.
+  </Step>
+</Steps>
+
+<Check>
+  성공적으로 연결되면 다음을 확인할 수 있습니다:
+  - 확장 프로그램 아이콘에 녹색 "ON" 배지
+  - PalanK 앱에 "브라우저 연결됨" 상태
+</Check>
+
+## 4단계: AI 사용 시작
+
+이제 자연어로 브라우저를 제어할 수 있습니다!
+
+<CodeGroup>
+```text 예시 명령어
+"구글에 가서 날씨 검색해줘"
+
+"첫 번째 검색 결과 클릭해"
+
+"이메일 입력란에 test@example.com 입력해"
+
+"이 페이지 스크린샷 찍어줘"
+
+"스크롤 내려서 가격 섹션 찾아줘"
+```
+</CodeGroup>
+
+## 문제 해결
+
+<AccordionGroup>
+  <Accordion icon="circle-exclamation" title="확장 프로그램에 빨간 ! 배지가 표시됨">
+    릴레이 서버에 연결할 수 없습니다. PalanK 데스크톱 앱이 실행 중인지 확인하고 확장 프로그램 아이콘을 다시 클릭하세요.
+  </Accordion>
+  <Accordion icon="plug" title="브라우저에 연결할 수 없음">
+    1. PalanK 앱이 완전히 로드되었는지 확인
+    2. 확장 프로그램 아이콘을 클릭하여 다시 연결 시도
+    3. 웹페이지를 새로고침하고 다시 시도
+  </Accordion>
+  <Accordion icon="shield" title="권한 거부됨">
+    일부 페이지(chrome://, Chrome 웹 스토어)는 보안상의 이유로 제어할 수 없습니다. 일반 웹페이지에서 시도하세요.
+  </Accordion>
+</AccordionGroup>
+
+## 다음 단계
+
+<CardGroup cols={2}>
+  <Card
+    title="브라우저 제어"
+    icon="mouse-pointer"
+    href="/ko/features/browser-control"
+  >
+    모든 브라우저 자동화 기능 알아보기
+  </Card>
+  <Card
+    title="AI 어시스턴트"
+    icon="robot"
+    href="/ko/features/ai-assistant"
+  >
+    AI 명령 패턴 마스터하기
+  </Card>
+</CardGroup>

@@ -1,0 +1,90 @@
+---
+title: はじめに
+description: 'PalanK Agentへようこそ - Windows向けAIブラウザ自動化ツール'
+---
+
+<img
+  className="block dark:hidden"
+  src="/images/hero-light.svg"
+  alt="PalanK Agent Hero"
+/>
+<img
+  className="hidden dark:block"
+  src="/images/hero-dark.svg"
+  alt="PalanK Agent Hero"
+/>
+
+## PalanK Agentとは？
+
+PalanK Agentは、Windows向けの強力なAI搭載ブラウザ自動化ツールです。Claude AIのインテリジェンスとシームレスなブラウザ制御を組み合わせ、自然言語コマンドでウェブタスクを自動化できます。
+
+<CardGroup cols={2}>
+  <Card
+    title="クイックスタート"
+    icon="rocket"
+    href="/ja/quickstart"
+  >
+    数分で始める
+  </Card>
+  <Card
+    title="ブラウザ拡張機能"
+    icon="puzzle-piece"
+    href="/ja/browser-extension"
+  >
+    ブラウザ制御用Chrome拡張機能をインストール
+  </Card>
+  <Card
+    title="機能"
+    icon="sparkles"
+    href="/ja/features/browser-control"
+  >
+    すべての機能を探索
+  </Card>
+  <Card
+    title="APIリファレンス"
+    icon="code"
+    href="/ja/api-reference/introduction"
+  >
+    アプリケーションと統合
+  </Card>
+</CardGroup>
+
+## 主な機能
+
+<AccordionGroup>
+  <Accordion icon="browser" title="ブラウザ自動化">
+    自然言語でChromeタブを制御。クリック、入力、スクロール、ナビゲーション - すべてAIコマンドで実行できます。
+  </Accordion>
+  <Accordion icon="robot" title="AIアシスタント">
+    Claude AIにより、複雑な指示を理解し、多段階のウェブタスクを自動実行します。
+  </Accordion>
+  <Accordion icon="bolt" title="ローカル処理">
+    すべての処理はお使いのマシンで行われます。ブラウザ制御にクラウド依存なく、データはプライベートに保たれます。
+  </Accordion>
+  <Accordion icon="puzzle-piece" title="Chrome拡張機能">
+    軽量な拡張機能が既存のChromeタブをPalanKに接続します。別のブラウザは不要です。
+  </Accordion>
+</AccordionGroup>
+
+## 動作の仕組み
+
+```mermaid
+graph LR
+    A[PalanKデスクトップアプリ] --> B[ローカルゲートウェイ]
+    B --> C[Chrome拡張機能]
+    C --> D[ブラウザタブ]
+    A --> E[Claude AI]
+    E --> A
+```
+
+1. **PalanKデスクトップアプリ** - AIチャットインターフェース付きのネイティブWindowsアプリ
+2. **ローカルゲートウェイ** - ブラウザ通信用のセキュアなローカルサーバー
+3. **Chrome拡張機能** - ブラウザをPalanKに接続する軽量リレー
+4. **Claude AI** - コマンドを理解するインテリジェントアシスタント
+
+## 必要条件
+
+- Windows 10以降
+- Google Chromeブラウザ
+- インターネット接続（AI機能用）
+- PalanK Browser Relay Chrome拡張機能
