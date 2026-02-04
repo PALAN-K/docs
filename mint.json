@@ -30,7 +30,7 @@
     },
     {
       "name": "Download",
-      "url": "https://palank.co.kr"
+      "url": "https://github.com/naegeon/palank-openclaw/releases/latest"
     }
   ],
   "topbarCtaButton": {
@@ -73,6 +73,6 @@
     }
   ],
   "footerSocials": {
-    "website": "https://palank.co.kr"
+    "website": "https://github.com/naegeon/palank-openclaw/releases/latest"
   }
 }

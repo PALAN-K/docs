@@ -7,13 +7,26 @@ description: '5分以内にPalanK Agentを起動'
 
 Windows向けPalanK Agentの最新バージョンをダウンロードしてください。
 
-<Card
-  title="PalanK Agentをダウンロード"
-  icon="download"
-  href="https://palank.co.kr"
->
-  最新のWindowsインストーラーを入手
-</Card>
+<CardGroup cols={2}>
+  <Card
+    title="EXE (NSIS)"
+    icon="download"
+    href="https://github.com/naegeon/palank-openclaw/releases/download/v2.0.0/PalanK-OpenClaw_2.0.0_x64-setup.exe"
+  >
+    28MB - 一般ユーザー向け推奨
+  </Card>
+  <Card
+    title="MSI"
+    icon="download"
+    href="https://github.com/naegeon/palank-openclaw/releases/download/v2.0.0/PalanK-OpenClaw_2.0.0_x64_en-US.msi"
+  >
+    41MB - 企業/IT管理者向け
+  </Card>
+</CardGroup>
+
+<Note>
+  初回起動時にOpenClawが自動的にインストールされます。
+</Note>
 
 ## ステップ2: Chrome拡張機能をインストール
 
